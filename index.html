@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luxury | Fragrance Beyond Time</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Luxury Header Section -->
+  <header class="header">
+    <!-- Brand / Logo Area -->
+    <a href="#home" class="brand">
+      <div class="brand-icon">
+        <svg class="brand-lotus" viewBox="0 0 48 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#fbf1d8"/>
+              <stop offset="45%" stop-color="#dfb66c"/>
+              <stop offset="100%" stop-color="#aa7e2e"/>
+            </linearGradient>
+          </defs>
+          <path d="M24 2 C20 14 17 24 24 35 C31 24 28 14 24 35 Z" stroke="url(#goldGrad)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M24 16 C17 17 11 24 14 33 C18 35 22 34 24 35" stroke="url(#goldGrad)" stroke-width="1.8" stroke-linecap="round" />
+          <path d="M24 16 C31 17 37 24 34 33 C30 35 26 34 24 35" stroke="url(#goldGrad)" stroke-width="1.8" stroke-linecap="round" />
+          <path d="M18 23 C9 23 4 28 6 34 C11 36 17 35 21 34" stroke="url(#goldGrad)" stroke-width="1.7" stroke-linecap="round" />
+          <path d="M30 23 C39 23 44 28 42 34 C37 36 31 35 27 34" stroke="url(#goldGrad)" stroke-width="1.7" stroke-linecap="round" />
+        </svg>
+      </div>
+      <div class="brand-text">
+        <h1 class="brand-title">Luxury</h1>
+        <span class="brand-tagline">FRAGRANCE BEYOND TIME</span>
+      </div>
+    </a>
+
+    <div class="header-divider header-divider-left"></div>
+
+    <!-- Navigation Menu -->
+    <nav class="nav-menu">
+      <a href="#home" class="nav-link active">Home</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#collection" class="nav-link">Collection</a>
+      <a href="#services" class="nav-link">Services</a>
+      <a href="#portfolio" class="nav-link">Portfolio</a>
+      <a href="#testimonials" class="nav-link">Testimonials</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+
+    <!-- Header Actions (Search & Shop/Cart) -->
+    <div class="header-actions">
+      <button class="search-btn" aria-label="Search" onclick="document.querySelector('#collection').scrollIntoView({behavior:'smooth'})">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+      </button>
+
+      <div class="header-divider header-divider-right"></div>
+
+      <!-- Shop Now / Open Cart Button -->
+      <button class="btn-shop" id="open-cart-btn" aria-label="Open Luxury Cart">
+        <svg class="bag-icon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <path d="M16 10a4 4 0 0 1-8 0"></path>
+        </svg>
+        <span>Shop Now</span>
+        <span class="cart-counter" id="cart-count">0</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Pinned 3D Image Sequence Animation Canvas -->
+  <canvas id="canvas"></canvas>
+
+  <!-- Main Scrollable Sections Container (Clean Floating Typography, Enhanced Visibility) -->
+  <main class="main-content">
+    
+    <!-- 1. Hero Section -->
+    <section class="site-section section-hero" id="home">
+      <div class="section-content hero-content">
+        <!-- Golden Eyebrow with Side Lines -->
+        <div class="section-eyebrow">
+          <span class="eyebrow-line"></span>
+          <span class="eyebrow-text">LUXURY PERFUME</span>
+          <span class="eyebrow-line"></span>
+        </div>
+
+        <!-- Majestic Main Title -->
+        <h1 class="hero-title">
+          <span class="gold-highlight">Luxury</span> in<br>
+          <span class="title-sub">Every Spray</span>
+        </h1>
+
+        <!-- Elegant Subtitle -->
+        <p class="hero-description">
+          Discover a world of timeless fragrances that define your style and confidence. Handcrafted rare elixirs designed to leave an unforgettable presence.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="hero-cta-group">
+          <a href="#collection" class="btn-explore">
+            <span>Explore Collection</span>
+            <svg class="arrow-icon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+
+          <a href="#services" class="btn-story">
+            <span class="play-circle">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
+                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+              </svg>
+            </span>
+            <span class="story-text">Watch Our Story</span>
+          </a>
+        </div>
+
+        <!-- Trust Badges Strip -->
+        <div class="hero-badges">
+          <div class="badge-item">
+            <svg class="badge-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 3h12l4 6-10 13L2 9z"></path>
+              <path d="M11 3v6"></path>
+              <path d="M2 9h20"></path>
+            </svg>
+            <span class="badge-text">Premium Quality</span>
+          </div>
+
+          <div class="badge-sep"></div>
+
+          <div class="badge-item">
+            <svg class="badge-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+            </svg>
+            <span class="badge-text">Long-Lasting Scent</span>
+          </div>
+
+          <div class="badge-sep"></div>
+
+          <div class="badge-item">
+            <svg class="badge-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              <polyline points="9 12 11 14 15 10"></polyline>
+            </svg>
+            <span class="badge-text">Trusted Brand</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. About Section -->
+    <section class="site-section section-about" id="about">
+      <div class="section-content about-content">
+        <div class="section-eyebrow">
+          <span class="eyebrow-line"></span>
+          <span class="eyebrow-text">THE ART OF PERFUMERY</span>
+          <span class="eyebrow-line"></span>
+        </div>
+
+        <h2 class="section-title">
+          Crafted from Earth’s Most <span class="gold-highlight">Rare Treasures</span>
+        </h2>
+
+        <p class="section-description">
+          Born from centuries of French perfumery heritage and infused with nocturnal Grasse florals, liquid amber, and aged Cambodian agarwood. Each flacon is hand-finished in 24-karat gold filigree, designed to transcend time and leave an indelible impression.
+        </p>
+
+        <!-- Luxury Metrics Row (Clean Floating Columns) -->
+        <div class="metrics-row">
+          <div class="metric-item">
+            <span class="metric-number">100%</span>
+            <span class="metric-label">Pure Rare Botanicals</span>
+          </div>
+          <div class="metric-divider"></div>
+          <div class="metric-item">
+            <span class="metric-number">24h+</span>
+            <span class="metric-label">Sensory Sillage</span>
+          </div>
+          <div class="metric-divider"></div>
+          <div class="metric-item">
+            <span class="metric-number">Limited</span>
+            <span class="metric-label">Numbered Flacons</span>
+          </div>
+        </div>
+
+        <div class="section-action">
+          <a href="#collection" class="luxury-link">
+            <span>Discover The Collection</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Shopping Collection Section (Shop in SLE Currency) -->
+    <section class="site-section section-collection" id="collection">
+      <div class="collection-wrapper">
+        <div class="section-header-center">
+          <div class="section-eyebrow">
+            <span class="eyebrow-line"></span>
+            <span class="eyebrow-text">THE HAUTE COLLECTION</span>
+            <span class="eyebrow-line"></span>
+          </div>
+          <h2 class="section-title">
+            The Signature <span class="gold-highlight">Flacon Collection</span>
+          </h2>
+          <p class="section-subtitle">
+            Indulge in our limited Extrait de Parfum creations, encased in masterfully sculpted crystal flacons. Select your signature scent below.
+          </p>
+        </div>
+
+        <!-- Products Grid: 8 Signature & Artisan Flacons -->
+        <div class="products-grid">
+          
+          <!-- Product 1: Sultan Oud Santal -->
+          <div class="product-item">
+            <div class="product-visual">
+              <img src="Oud Santal.jfif" alt="Sultan Oud Santal" class="product-img" loading="lazy">
+              <span class="product-tag">Imperial Crown</span>
+            </div>
+            <div class="product-info">
+              <div class="product-header">
+                <h3 class="product-name">Sultan Oud Santal</h3>
+                <span class="product-price">SLE 12,500</span>
+              </div>
+              <p class="product-notes">Royal Emerald Oud • Indian Sandalwood • Ambergris</p>
+              <div class="product-footer">
+                <span class="product-volume">100ml • Extrait de Parfum</span>
+                <button class="btn-add-cart" onclick="addToCart('p-sultan', 'Sultan Oud Santal', 12500, 'Oud Santal.jfif', '100ml')">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <path d="M16 10a4 4 0 0 1-8 0"></path>
+                  </svg>
+                  <span>Add to Bag</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 2: Kokon Imperial Azure -->
+          <div class="product-item">
+            <div class="product-visual">
+              <img src="❀°•_‿ Kokon Home.jfif" alt="Kokon Imperial Azure" class="product-img" loading="lazy">
+              <span class="product-tag">Filigree Edition</span>
+            </div>
+            <div class="product-info">
+              <div class="product-header">
+                <h3 class="product-name">Kokon Imperial Azure</h3>
+                <span class="product-price">SLE 9,800</span>
+              </div>
+              <p class="product-notes">Cerulean Florals • Liquid Gold • Neroli Blossom</p>
+              <div class="product-footer">
+                <span class="product-volume">100ml • Extrait de Parfum</span>
+                <button class="btn-add-cart" onclick="addToCart('p-kokon', 'Kokon Imperial Azure', 9800, '❀°•_‿ Kokon Home.jfif', '100ml')">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <path d="M16 10a4 4 0 0 1-8 0"></path>
+                  </svg>
+                  <span>Add to Bag</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 3: Anubis Obsidian Noir -->
+          <div class="product-item">
+            <div class="product-visual">
+              <img src="983403268657969500.jfif" alt="Anubis Obsidian Noir" class="product-img" loading="lazy">
+              <span class="product-tag">Pharaonic Coffret</span>
+            </div>
+            <div class="product-info">
+              <div class="product-header">
+                <h3 class="product-name">Anubis Obsidian Noir</h3>
+                <span class="product-price">SLE 14,000</span>
+              </div>
+              <p class="product-notes">Egyptian Myrrh • Smoked Frankincense • Black Amber</p>
+              <div class="product-footer">
+                <span class="product-volume">100ml • Extrait de Parfum</span>
+                <button class="btn-add-cart" onclick="addToCart('p-anubis', 'Anubis Obsidian Noir', 14000, '983403268657969500.jfif', '100ml')">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <path d="M16 10a4 4 0 0 1-8 0"></path>
+                  </svg>
+                  <span>Add to Bag</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 4: Zsozso Royal Sapphire -->
+          <div class="product-item">
+            <div class="product-visual">
+              <img src="download.jfif" alt="Zsozso Royal Sapphire" class="product-img" loading="lazy">
+              <span class="product-tag">Royal Coat of Arms</span>
+            </div>
+            <div class="product-info">
+              <div class="product-header">
+                <h3 class="product-name">Zsozso Royal Sapphire</h3>
+                <span class="product-price">SLE 11,200</span>
+              </div>
+              <p class="product-notes">Cobalt Iris • Damascene Rose • Velvet Cashmere</p>
+              <div class="product-footer">
+                <span class="product-volume">100ml • Extrait de Parfum</span>
+                <button class="btn-add-cart" onclick="addToCart('p-zsozso', 'Zsozso Royal Sapphire', 11200, 'download.jfif', '100ml')">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <path d="M16 10a4 4 0 0 1-8 0"></path>
+                  </svg>
+                  <span>Add to Bag</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 5: Maroof Royal Ruby -->
+          <div class="product-item">
+            <div class="product-visual">
+              <img src="Maroof by Naseem Perfumes_ Top Notes_ pineapple….jfif" alt="Maroof Royal Ruby" class="product-img" loading="lazy">
+              <span class="product-tag">Oriental Elixir</span>
+            </div>
+            <div class="product-info">
+              <div class="product-header">
+                <h3 class="product-name">Maroof Royal Ruby</h3>
+                <span class="product-price">SLE 8,500</span>
+              </div>
+              <p class="product-notes">Glazed Pineapple • Crimson Rose • Golden Amber</p>
+              <div class="product-footer">
+                <span class="product-volume">50ml • Pure Concentrated Attar</span>
+                <button class="btn-add-cart" onclick="addToCart('p-maroof', 'Maroof Royal Ruby', 8500, 'Maroof by Naseem Perfumes_ Top Notes_ pineapple….jfif', '50ml')">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <path d="M16 10a4 4 0 0 1-8 0"></path>
+                  </svg>
+                  <span>Add to Bag</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 6: Paradiso Azzurro Crystal -->
+          <div class="product-item">
+            <div class="product-visual">
+              <img src="Roberto Cavalli Fragrances PARADISO AZZURRO WOMAN EDP - Parfum - -.jfif" alt="Paradiso Azzurro Crystal" class="product-img" loading="lazy">
+              <span class="product-tag">Faceted Jewel</span>
+            </div>
+            <div class="product-info">
+              <div class="product-header">
+                <h3 class="product-name">Paradiso Azzurro</h3>
+                <span class="product-price">SLE 7,900</span>
+              </div>
+              <p class="product-notes">Mediterranean Cypress • Wild Jasmine • Citrus Dew</p>
+              <div class="product-footer">
+                <span class="product-volume">75ml • Eau de Parfum</span>
+                <button class="btn-add-cart" onclick="addToCart('p-paradiso', 'Paradiso Azzurro', 7900, 'Roberto Cavalli Fragrances PARADISO AZZURRO WOMAN EDP - Parfum - -.jfif', '75ml')">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <path d="M16 10a4 4 0 0 1-8 0"></path>
+                  </svg>
+                  <span>Add to Bag</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 7: Royal Amber Minaret (Signature 3D Flacon) -->
+          <div class="product-item">
+            <div class="product-visual">
+              <img src="ezgif-401bf9df67b7cd4b-jpg/ezgif-frame-001.jpg" alt="Royal Amber Minaret" class="product-img" loading="lazy">
+              <span class="product-tag">Signature Minaret</span>
+            </div>
+            <div class="product-info">
+              <div class="product-header">
+                <h3 class="product-name">Royal Amber Minaret</h3>
+                <span class="product-price">SLE 9,500</span>
+              </div>
+              <p class="product-notes">Golden Saffron • Solar Amber • Rare Agarwood</p>
+              <div class="product-footer">
+                <span class="product-volume">100ml • Extrait de Parfum</span>
+                <button class="btn-add-cart" onclick="addToCart('p-minaret', 'Royal Amber Minaret', 9500, 'ezgif-401bf9df67b7cd4b-jpg/ezgif-frame-001.jpg', '100ml')">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <path d="M16 10a4 4 0 0 1-8 0"></path>
+                  </svg>
+                  <span>Add to Bag</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 8: Ruby Rose Impériale -->
+          <div class="product-item">
+            <div class="product-visual">
+              <img src="ezgif-401bf9df67b7cd4b-jpg/ezgif-frame-150.jpg" alt="Ruby Rose Impériale" class="product-img" loading="lazy">
+              <span class="product-tag">Crown Lotus</span>
+            </div>
+            <div class="product-info">
+              <div class="product-header">
+                <h3 class="product-name">Ruby Rose Impériale</h3>
+                <span class="product-price">SLE 11,800</span>
+              </div>
+              <p class="product-notes">Nocturnal Rose • Bourbon Vanilla • Molten Amber</p>
+              <div class="product-footer">
+                <span class="product-volume">100ml • Extrait de Parfum</span>
+                <button class="btn-add-cart" onclick="addToCart('p-rubyrose', 'Ruby Rose Impériale', 11800, 'ezgif-401bf9df67b7cd4b-jpg/ezgif-frame-150.jpg', '100ml')">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <path d="M16 10a4 4 0 0 1-8 0"></path>
+                  </svg>
+                  <span>Add to Bag</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Services Section (Clean Floating Layout) -->
+    <section class="site-section section-services" id="services">
+      <div class="services-wrapper">
+        <div class="section-header-center">
+          <div class="section-eyebrow">
+            <span class="eyebrow-line"></span>
+            <span class="eyebrow-text">HAUTE PARFUMERIE SERVICES</span>
+            <span class="eyebrow-line"></span>
+          </div>
+          <h2 class="section-title">
+            Bespoke <span class="gold-highlight">Olfactory Experiences</span>
+          </h2>
+          <p class="section-subtitle">
+            Indulge in tailored sensory craftsmanship curated exclusively for royalty and discerning collectors.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Service 1 -->
+          <div class="service-column">
+            <div class="service-icon-box">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+              </svg>
+            </div>
+            <h3 class="service-title">Custom Formulation</h3>
+            <p class="service-text">
+              Private rendezvous with our master noses to blend an intimate scent tailored to your individual skin chemistry and memories.
+            </p>
+            <span class="service-badge">Bespoke Atelier</span>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="service-column featured">
+            <div class="service-icon-box">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M12 6v6l4 2"></path>
+              </svg>
+            </div>
+            <h3 class="service-title">Private Tasting Masterclass</h3>
+            <p class="service-text">
+              Immersive sensory journey decoding the world's rarest oud, orris butter, and vintage ambergris distillations.
+            </p>
+            <span class="service-badge">Exclusive Access</span>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="service-column">
+            <div class="service-icon-box">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+              </svg>
+            </div>
+            <h3 class="service-title">Royal Concierge & Gifting</h3>
+            <p class="service-text">
+              Handcrafted Italian lacquer cases with 24k gold leaf monogramming delivered worldwide via white-glove courier.
+            </p>
+            <span class="service-badge">Global Delivery</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Portfolio / Fragrance Notes Section (Clean Floating Accord) -->
+    <section class="site-section section-portfolio" id="portfolio">
+      <div class="section-content portfolio-content">
+        <div class="section-eyebrow">
+          <span class="eyebrow-line"></span>
+          <span class="eyebrow-text">THE OLFACTORY PYRAMID</span>
+          <span class="eyebrow-line"></span>
+        </div>
+
+        <h2 class="section-title">
+          A Symphony of <span class="gold-highlight">Precious Notes</span>
+        </h2>
+
+        <p class="section-description">
+          An evolving sensory architecture designed to unfold over 24 hours upon warm skin.
+        </p>
+
+        <!-- Pyramid Tiers (Bordered lines, no square box) -->
+        <div class="notes-pyramid">
+          <div class="note-tier">
+            <div class="note-tier-header">
+              <span class="note-phase">TOP NOTES</span>
+              <span class="note-time">First 30 Minutes</span>
+            </div>
+            <h4 class="note-ingredients">Golden Saffron • Calabrian Bergamot • Sparkling Neroli</h4>
+            <p class="note-desc">A radiant burst of luminous citrus kissed with precious crimson saffron threads.</p>
+          </div>
+
+          <div class="note-tier highlighted">
+            <div class="note-tier-header">
+              <span class="note-phase">HEART NOTES</span>
+              <span class="note-time">2 to 8 Hours</span>
+            </div>
+            <h4 class="note-ingredients">Nocturnal Rose • Royal Jasmine • Warm Amber Crystals</h4>
+            <p class="note-desc">The opulent floral core, woven with velvety midnight rose and molten amber resins.</p>
+          </div>
+
+          <div class="note-tier">
+            <div class="note-tier-header">
+              <span class="note-phase">BASE NOTES</span>
+              <span class="note-time">8 to 24+ Hours</span>
+            </div>
+            <h4 class="note-ingredients">Aged Cambodian Oud • Smoked Bourbon Vanilla • White Sandalwood</h4>
+            <p class="note-desc">An intoxicating whisper of smoky precious woods, dark vanilla bean, and golden musk.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Testimonials Section (Clean Floating Quotes) -->
+    <section class="site-section section-testimonials" id="testimonials">
+      <div class="section-content testimonials-content">
+        <div class="section-eyebrow">
+          <span class="eyebrow-line"></span>
+          <span class="eyebrow-text">ACCLAIMED BY CONNOISSEURS</span>
+          <span class="eyebrow-line"></span>
+        </div>
+
+        <h2 class="section-title">
+          Echoes of <span class="gold-highlight">Pure Grandeur</span>
+        </h2>
+
+        <div class="testimonials-stack">
+          <!-- Review 1 -->
+          <div class="testimonial-item">
+            <div class="stars-row">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <p class="testimonial-quote">
+              "The depth and longevity of Luxury is unlike anything else in my collection. It commands attention without raising its voice."
+            </p>
+            <div class="testimonial-author">
+              <span class="author-name">Lady Eleanor Vance</span>
+              <span class="author-title">Collector & Scent Enthusiast — Paris</span>
+            </div>
+          </div>
+
+          <!-- Review 2 -->
+          <div class="testimonial-item">
+            <div class="stars-row">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <p class="testimonial-quote">
+              "An intoxicating blend of golden amber and velvet rose. Truly wearable haute couture that turns every room into a sanctuary."
+            </p>
+            <div class="testimonial-author">
+              <span class="author-name">Marcus Sterling</span>
+              <span class="author-title">Creative Director — Milan</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Contact / VIP Allocation Section & Footer -->
+    <section class="site-section section-contact" id="contact">
+      <div class="section-content contact-content">
+        <div class="section-eyebrow">
+          <span class="eyebrow-line"></span>
+          <span class="eyebrow-text">EXCLUSIVE PRIVILEGE</span>
+          <span class="eyebrow-line"></span>
+        </div>
+
+        <h2 class="section-title">
+          Step into the World of <span class="gold-highlight">Luxury</span>
+        </h2>
+
+        <p class="contact-subtitle">
+          Request a private boutique consultation, reserve from the numbered edition batch, or join our exclusive client circle.
+        </p>
+
+        <!-- VIP Form -->
+        <form class="vip-form" onsubmit="event.preventDefault(); showToast('Allocation request submitted. Our concierge will contact you in Sierra Leone.');">
+          <div class="input-wrapper">
+            <input type="email" class="vip-input" placeholder="Enter your VIP email address..." required>
+            <button type="submit" class="btn-vip-submit">
+              <span>Request Allocation</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </button>
+          </div>
+        </form>
+
+        <!-- Luxury Locations -->
+        <div class="boutique-locations">
+          <span class="locations-label">PRIVATE ATELIERS &amp; BOUTIQUES</span>
+          <p class="locations-list">Freetown • Paris • London • Dubai • New York • Tokyo • Zurich</p>
+        </div>
+
+        <!-- Footer Bar with Creator Initials / Branding -->
+        <footer class="site-footer">
+          <div class="footer-brand">
+            <span class="footer-logo">Luxury</span>
+            <span class="footer-tagline">FRAGRANCE BEYOND TIME</span>
+          </div>
+
+          <!-- Prominent Creator Credit: Crafted By MAB TECHNOLOGIES SL -->
+          <div class="crafted-banner">
+            <span class="crafted-badge">EXCLUSIVE ARCHITECTURE</span>
+            <p class="crafted-text">Crafted By <span class="crafted-gold">MAB TECHNOLOGIES SL</span></p>
+          </div>
+
+          <div class="footer-links">
+            <a href="#">Privacy Protocol</a>
+            <span>•</span>
+            <a href="#">Heritage Authenticity</a>
+            <span>•</span>
+            <a href="#">Bespoke Terms</a>
+          </div>
+          <p class="footer-copy">© 2026 Luxury Parfums Haute Joaillerie. All rights reserved.</p>
+        </footer>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Luxury Shopping Cart Drawer & Backdrop (SLE Currency) -->
+  <div class="cart-backdrop" id="cart-backdrop"></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-hidden="true">
+    <div class="cart-header">
+      <div class="cart-title-wrap">
+        <h3 class="cart-title">Your Luxury Bag</h3>
+        <span class="cart-item-count" id="drawer-item-count">(0 items)</span>
+      </div>
+      <button class="cart-close-btn" id="close-cart-btn" aria-label="Close Cart">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Cart Items Scroll Area -->
+    <div class="cart-body" id="cart-items-container">
+      <!-- Populated dynamically via JS -->
+      <div class="cart-empty-state" id="cart-empty-state">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(223, 182, 108, 0.4)" stroke-width="1.5">
+          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <path d="M16 10a4 4 0 0 1-8 0"></path>
+        </svg>
+        <p class="empty-text">Your luxury bag is currently empty.</p>
+        <button class="btn-explore-shop" onclick="closeCart(); document.querySelector('#collection').scrollIntoView({behavior:'smooth'})">
+          Explore Collection
+        </button>
+      </div>
+    </div>
+
+    <!-- Cart Footer with Checkout in SLE -->
+    <div class="cart-footer" id="cart-footer">
+      <div class="cart-summary-row">
+        <span class="summary-label">Subtotal</span>
+        <span class="summary-total" id="cart-subtotal">SLE 0</span>
+      </div>
+      <p class="cart-shipping-notice">
+        ✓ Includes Complimentary White-Glove Courier Delivery in Sierra Leone &amp; Worldwide
+      </p>
+      <button class="btn-checkout" onclick="handleCheckout()">
+        <span>Proceed to Checkout</span>
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </button>
+    </div>
+  </aside>
+
+  <!-- Luxury Floating Toast Notification -->
+  <div class="luxury-toast" id="luxury-toast" role="status"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

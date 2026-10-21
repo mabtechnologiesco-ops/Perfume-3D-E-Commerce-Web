@@ -1,0 +1,9 @@
+{
+  "name": "3d-scroll-animation",
+  "version": "1.0.0",
+  "description": "Smooth 3D image sequence scroll animation with Luxury Collection",
+  "main": "index.html",
+  "scripts": {
+    "start": "node server.js"
+  }
+}
